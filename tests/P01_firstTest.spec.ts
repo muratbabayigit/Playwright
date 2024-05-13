@@ -10,4 +10,8 @@ test("TestOtomasyonu.com", async ({page}) =>{
 
 );
 
+test("firsttest", async({page})=>{
+       await page.goto('https://www.babayigit.net')
+})
+
 
