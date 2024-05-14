@@ -1,7 +1,7 @@
 import { test,expect } from '@playwright/test';
 
 
-test('textbox and radioButton', async({page}) => {
+test.skip('textbox and radioButton', async({page}) => {
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     const nameLocator=page.locator('#name');
@@ -25,6 +25,16 @@ test('textbox and radioButton', async({page}) => {
 
 });
 
-test('', () => {
-    
+test('DropDown menu', async({page}) => {
+    await page.goto('https://testautomationpractice.blogspot.com/')
+    const dropDown=page.locator('#country');
+
+    await dropDown.selectOption("Japan");
+    await dropDown.selectOption({value:"japan"});
+    await dropDown.selectOption({index:6});
+
+    const options=page.locator("#country option");
+
+    expect(options).not.toHaveCount(12);
+
 });
