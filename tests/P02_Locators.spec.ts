@@ -14,7 +14,7 @@ test('Site Giriş', async({page})=>{
     await expect(page).toHaveTitle('Test Otomasyonu - Test Otomasyonu')
 });
 
-test('Uye Kayıt İşlemi',async({page})=>{
+test('Uye Kayit İşlemi',async({page})=>{
     await page.click("//*[text()='Sign Up Now']"); //Xpath
    // await page.locator("//*[text()='Sign Up Now']").click();
     await page.fill('#firstName','Murat'); //CSS 
