@@ -51,14 +51,3 @@ test('Generic Assertion',async({})=>{
 
 
 });
-
-test ('Nutella sayısı',async({page})=>{
-    await page.goto('https://www.google.com.tr/');
-    await page.locator('#APjFqb').fill('nutella');
-    await page.locator("//*[@name='btnK']").nth(1).press('Enter');
-   
-
-    
-
-})
-
